@@ -35,9 +35,9 @@ class PedigreeMatrix(object):
 
     def calculate(self, basic_uncertainty=1.0, as_geometric_sigma=False):
         values = [basic_uncertainty] + self.get_values()
-        sigma = math.sqrt(sum([math.log(x) ** 2 for x in values])) / 2
+        sigma = math.sqrt(sum([math.log(x) ** 2 for x in values]))
         if as_geometric_sigma:
-            return math.exp(2 * sigma)
+            return math.exp(sigma)
         else:
             return sigma
 
