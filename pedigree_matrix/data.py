@@ -15,6 +15,91 @@ uncertainty_factors = {
         "geographical correlation": (1.0, 1.04, 1.08, 1.11, 1.11),
         "further technological correlation": (1.0, 1.18, 1.65, 2.08, 2.8),
         "sample size": (1.0, 1.0, 1.0, 1.0, 1.0),
+    },
+
+    # Version 3 is the generic PM from Muller et al. 2016
+    'version_3': {
+        "reliability": (1.0, 1.01, 1.21, 1.25, 2.36),
+        "completeness": (1.0, 1.02, 1.05, 1.10, 1.63),
+        "temporal correlation": (1.0, 1.08, 1.55, 2.22, 2.49),
+        # The factor for score 5 is 2.30, but we use the same as score 4 for more consistency
+        "geographical correlation": (1.0, 1.14, 1.23, 2.36, 2.36),
+        "further technological correlation": (1.0, 1.19, 1.52, 1.95, 2.23),
+        "sample size": (1.0, 1.0, 1.0, 1.0, 1.0),
+    },
+
+    # Agriculture specific PM from Muller et al. 2016
+    'version_3_agriculture': {
+        "reliability": (1.0, 1.00, 1.05, 1.07, 1.6),
+        "completeness": (1.0, 1.02, 1.05, 1.10, 1.63),
+        "temporal correlation": (1.0, 1.03, 1.13, 1.8, 4.07),
+        # The factor for score 5 is 1.55, but we use the same as score 4 for more consistency
+        "geographical correlation": (1.0, 1.0, 1.10, 1.57, 1.57),
+        "further technological correlation": (1.0, 1.0, 1.32, 1.59, 2.03),
+        "sample size": (1.0, 1.0, 1.0, 1.0, 1.0),
+    },
+
+    # Combustion specific PM from Muller et al. 2016
+    'version_3_combustion': {
+        "reliability": (1.0, 1.06, 1.12, 1.18, 1.69),
+        "completeness": (1.0, 1.02, 1.05, 1.10, 1.63),
+        "temporal correlation": (1.0, 1.08, 1.27, 1.72, 1.75),
+        # The factor for score 5 is 1.65, but we use the same as score 4 for more consistency
+        "geographical correlation": (1.0, 1.08, 1.11, 1.66, 1.66),
+        "further technological correlation": (1.0, 1.04, 1.04, 1.5, 1.89),
+        "sample size": (1.0, 1.0, 1.0, 1.0, 1.0),
+    },
+
+    # Utilities specific PM from Muller et al. 2016
+    'version_3_utilities': {
+        "reliability": (1.0, 1.01, 1.21, 1.25, 2.36),
+        "completeness": (1.0, 1.02, 1.05, 1.10, 1.63),
+        "temporal correlation": (1.0, 1.0, 1.22, 1.87, 2.52),
+        "geographical correlation": (1.0, 1.14, 1.23, 2.36, 2.36),
+        "further technological correlation": (1.0, 1.0, 1.29, 1.62, 2.0),
+        "sample size": (1.0, 1.0, 1.0, 1.0, 1.0),
+    },
+
+    # Manufacturing specific PM from Muller et al. 2016
+    'version_3_manufacturing': {
+        "reliability": (1.0, 1.0, 1.2, 1.25, 2.6),
+        "completeness": (1.0, 1.02, 1.05, 1.10, 1.63),
+        "temporal correlation": (1.0, 1.05, 1.38, 2.12, 2.47),
+        # The factor for score 5 is 2.92, but we use the same as score 4 for more consistency
+        "geographical correlation": (1.0, 1.09, 1.16, 1.98, 1.98),
+        "further technological correlation": (1.0, 1.19, 1.52, 1.95, 2.23),
+        "sample size": (1.0, 1.0, 1.0, 1.0, 1.0),
+    },
+
+    # Chemicals specific PM from Muller et al. 2016
+    'version_3_chemicals': {
+        "reliability": (1.0, 1.01, 1.21, 1.25, 2.36),
+        "completeness": (1.0, 1.02, 1.05, 1.10, 1.63),
+        "temporal correlation": (1.0, 1.08, 1.55, 2.22, 2.49),
+        "geographical correlation": (1.0, 1.14, 1.23, 2.36, 2.36),
+        "further technological correlation": (1.0, 1.16, 1.44, 2.04, 2.21),
+        "sample size": (1.0, 1.0, 1.0, 1.0, 1.0),
+    },
+
+    # Metal specific PM from Muller et al. 2016
+    'version_3_metal': {
+        "reliability": (1.0, 1.0, 1.0, 1.21, 1.51),
+        "completeness": (1.0, 1.02, 1.05, 1.10, 1.63),
+        "temporal correlation": (1.0, 1.07, 1.22, 1.32, 1.49),
+        "geographical correlation": (1.0, 1.14, 1.23, 2.36, 2.36),
+        "further technological correlation": (1.0, 1.19, 1.52, 1.95, 2.23),
+        "sample size": (1.0, 1.0, 1.0, 1.0, 1.0),
+    },
+
+    # Transport specific PM from Muller et al. 2016
+    'version_3_transport': {
+        "reliability": (1.0, 1.01, 1.21, 1.25, 2.36),
+        "completeness": (1.0, 1.02, 1.05, 1.10, 1.63),
+        "temporal correlation": (1.0, 1.08, 1.55, 2.22, 2.49),
+        # The factor for score 5 is 1.15, but we use the same as score 4 for more consistency
+        "geographical correlation": (1.0, 1.16, 1.26, 1.26, 1.26),
+        "further technological correlation": (1.0, 1.19, 1.52, 1.95, 2.23),
+        "sample size": (1.0, 1.0, 1.0, 1.0, 1.0),
     }
 }
 
