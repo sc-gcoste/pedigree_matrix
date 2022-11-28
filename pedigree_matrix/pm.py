@@ -1,4 +1,4 @@
-from .data import version_1, version_2
+from .data import uncertainty_factors
 from .from_string import find_pedigree_matrix
 from pprint import pformat
 import math
@@ -15,7 +15,7 @@ class PedigreeMatrix(object):
     )
 
     def __init__(self, version=1):
-        assert version in (1, 2), "Version must be 1 or 2"
+        assert version in (1, 2, *uncertainty_factors), f"Version must be 1, 2 or in {list(uncertainty_factors.keys())}"
         self.version = version
         self.factors = {}
 
@@ -43,7 +43,9 @@ class PedigreeMatrix(object):
 
     def get_values(self):
         assert self.factors, "Must provide Pedigree Matrix factors"
-        data = version_1 if self.version == 1 else version_2
+        data = uncertainty_factors['version_1'] if self.version == 1 \
+            else uncertainty_factors['version_1'] if self.version == 2 \
+            else uncertainty_factors[self.version]
         return [data[key][index - 1] for key, index in self.factors.items()]
 
     def __repr__(self):

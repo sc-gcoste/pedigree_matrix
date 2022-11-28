@@ -1,19 +1,21 @@
-version_1 = {
-    "reliability": (1.0, 1.05, 1.1, 1.2, 1.5),
-    "completeness": (1.0, 1.02, 1.05, 1.1, 1.2),
-    "temporal correlation": (1.0, 1.03, 1.1, 1.2, 1.5),
-    "geographical correlation": (1.0, 1.01, 1.02, 1.02, 1.1),
-    "further technological correlation": (1.0, 1.0, 1.2, 1.5, 2),
-    "sample size": (1.0, 1.02, 1.05, 1.1, 1.2),
-}
+uncertainty_factors = {
+    'version_1': {
+        "reliability": (1.0, 1.05, 1.1, 1.2, 1.5),
+        "completeness": (1.0, 1.02, 1.05, 1.1, 1.2),
+        "temporal correlation": (1.0, 1.03, 1.1, 1.2, 1.5),
+        "geographical correlation": (1.0, 1.01, 1.02, 1.02, 1.1),
+        "further technological correlation": (1.0, 1.0, 1.2, 1.5, 2),
+        "sample size": (1.0, 1.02, 1.05, 1.1, 1.2),
+    },
 
-version_2 = {
-    "reliability": (1.0, 1.54, 1.61, 1.69, 1.69),
-    "completeness": (1.0, 1.03, 1.04, 1.08, 1.08),
-    "temporal correlation": (1.0, 1.03, 1.1, 1.19, 1.29),
-    "geographical correlation": (1.0, 1.04, 1.08, 1.11, 1.11),
-    "further technological correlation": (1.0, 1.18, 1.65, 2.08, 2.8),
-    "sample size": (1.0, 1.0, 1.0, 1.0, 1.0),
+    'version_2': {
+        "reliability": (1.0, 1.54, 1.61, 1.69, 1.69),
+        "completeness": (1.0, 1.03, 1.04, 1.08, 1.08),
+        "temporal correlation": (1.0, 1.03, 1.1, 1.19, 1.29),
+        "geographical correlation": (1.0, 1.04, 1.08, 1.11, 1.11),
+        "further technological correlation": (1.0, 1.18, 1.65, 2.08, 2.8),
+        "sample size": (1.0, 1.0, 1.0, 1.0, 1.0),
+    }
 }
 
 # from collections import defaultdict
