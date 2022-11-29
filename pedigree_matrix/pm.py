@@ -44,7 +44,7 @@ class PedigreeMatrix(object):
     def get_values(self):
         assert self.factors, "Must provide Pedigree Matrix factors"
         data = uncertainty_factors['version_1'] if self.version == 1 \
-            else uncertainty_factors['version_1'] if self.version == 2 \
+            else uncertainty_factors['version_2'] if self.version == 2 \
             else uncertainty_factors[self.version]
         return [data[key][index - 1] for key, index in self.factors.items()]
 
